@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Assingment_1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- style sheet -->
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js" integrity="sha256-mBCu5+bVfYzOqpYyK4jm30ZxAZRomuErKEFJFIyrwvM=" crossorigin="anonymous"></script>
+  
+    <link href="messagebox.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="messagebox.js"></script>
+
+  
+
+</head>
+<body>
+    <section class="container">
+        <h1>Pick a Number</h1>
+        <h2>Between 1 - 10, If you guys the right number you win a prize!</h2>
+
+            <div class="form">
+            <label for="guessField">Enter a guess: </label>
+            <input type = "number" min="0" max="10" id = "guessField" class = "guessField">
+            <input type = "submit" value = "Submit" onclick="submitColor" class = "guessSubmit" id = "submitguess">
+            </div>
+    </section>
+
+
+    
+</body>
+
+<!-- SCRIPT -->
+<script src="app.js"></script>
+
+<script>
+            $.MessageBox({
+  input    : true,
+  message  : "Hey, How's it going?"
+}).done(function(data){
+  if ($.trim(data)) {
+    $.MessageBox("cool cool cool!");
+  } else {
+    $.MessageBox("okay then --__--");
+  }
+});
+ 
+    $( "body" ).click(function( event ) {
+  $( "#log" ).html( "clicked: " + event.target.nodeName );
+});
+ 
+
+ $(function() {  
+$('.container').click(function(){
+    $(this).css('background', 'yellow');
+    $(this).css('background', 'red');
+    $(this).css('background', 'green');
+  });
+});
+ </script>
+
+</html>
